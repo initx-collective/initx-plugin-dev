@@ -1,18 +1,18 @@
 {
-  "name": "initx-plugin-starter",
+  "name": "@initx-plugin/dev",
   "type": "module",
-  "version": "0.0.6",
+  "version": "0.0.0",
   "packageManager": "pnpm@9.12.3",
-  "description": "initx plugin starter template",
+  "description": "development assistance plugin for initx",
   "author": "imba97",
   "license": "MIT",
-  "homepage": "https://github.com/initx-collective/initx-plugin-starter#readme",
+  "homepage": "https://github.com/initx-collective/initx-plugin-dev#readme",
   "repository": {
     "type": "git",
-    "url": "git@github.com:initx-collective/initx-plugin-starter.git"
+    "url": "git@github.com:initx-collective/initx-plugin-dev.git"
   },
   "bugs": {
-    "url": "https://github.com/initx-collective/initx-plugin-starter/issues"
+    "url": "https://github.com/initx-collective/initx-plugin-dev/issues"
   },
   "keywords": [
     "initx",
@@ -32,11 +32,11 @@
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
-    "@initx-plugin/core": "^0.0.21",
-    "@initx-plugin/utils": "^0.0.21"
+    "@initx-plugin/core": "^0.0.22",
+    "@initx-plugin/utils": "^0.0.22"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.8.0",
+    "@imba97/eslint-config": "^0.0.4",
     "@types/node": "^22.9.0",
     "bumpp": "^9.8.1",
     "eslint": "^9.14.0",

@@ -1,7 +1,11 @@
-## initx-plugin-starter
+## initx-plugin-dev
 
-`initx` plugin starter template.
+Development assistance plugin for initx.
 
-## Documentation
+## Functions
 
-[initx](https://github.com/initx-collective/initx)
+Synchronize cnpm `initx`, `@initx-plugin/core`, `@initx-plugin/utils` packages
+
+```bash
+npx initx dev sync
+```

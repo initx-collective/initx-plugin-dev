@@ -1,29 +1,36 @@
 import { type InitxContext, InitxPlugin } from '@initx-plugin/core'
-import { log } from '@initx-plugin/utils'
+import { c, log } from '@initx-plugin/utils'
 
-interface Store {
-  foo: string
-}
-
-export default class StarterPlugin extends InitxPlugin<Store> {
-  defaultStore = {
-    foo: 'bar'
+export default class DevelopmentPlugin extends InitxPlugin {
+  matchers = {
+    matching: 'dev',
+    description: 'Development assistance'
   }
 
-  matchers = [
-    {
-      matching: 'start',
-      description: 'Plugin starter'
+  async handle(_ctx: InitxContext, type: string) {
+    switch (type) {
+      // 同步 cnpm 包
+      case 'sync': {
+        const syncPackages = [
+          'initx',
+          '@initx-plugin/core',
+          '@initx-plugin/utils'
+        ]
+
+        log.info(`Syncing cnpm packages: ${syncPackages.join(', ')}`)
+
+        await c('npx', ['cnpm', 'sync', ...syncPackages], {
+          nodeOptions: {
+            stdio: 'inherit'
+          }
+        })
+
+        break
+      }
+
+      default: {
+        log.warn(`Unknown type: ${type}`)
+      }
     }
-  ]
-
-  async handle(ctx: InitxContext<Store>, ...others: string[]) {
-    log.info('initx-plugin-starter is running 🎊')
-
-    log.info('ctx')
-    console.log(ctx)
-
-    log.info('others')
-    console.log(others)
   }
 }
