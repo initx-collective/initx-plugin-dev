@@ -1,7 +1,7 @@
 {
   "name": "@initx-plugin/dev",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "packageManager": "pnpm@9.12.3",
   "description": "development assistance plugin for initx",
   "author": "imba97",
