@@ -7,15 +7,17 @@ export default class DevelopmentPlugin extends InitxPlugin {
     description: 'Development assistance'
   }
 
-  async handle(_ctx: InitxContext, type: string) {
+  async handle(_ctx: InitxContext, type: string, ...others: string[]) {
     switch (type) {
       // 同步 cnpm 包
       case 'sync': {
-        const syncPackages = [
-          'initx',
-          '@initx-plugin/core',
-          '@initx-plugin/utils'
-        ]
+        const syncPackages = others.length === 0
+          ? [
+              'initx',
+              '@initx-plugin/core',
+              '@initx-plugin/utils'
+            ]
+          : others
 
         log.info(`Syncing cnpm packages: ${syncPackages.join(', ')}`)
 
