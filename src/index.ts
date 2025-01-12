@@ -2,7 +2,7 @@ import { type InitxContext, InitxPlugin } from '@initx-plugin/core'
 import { c, log } from '@initx-plugin/utils'
 
 export default class DevelopmentPlugin extends InitxPlugin {
-  matchers = {
+  rules = {
     matching: 'dev',
     description: 'Development assistance'
   }
