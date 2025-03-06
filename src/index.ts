@@ -1,10 +1,13 @@
-import { type InitxContext, InitxPlugin } from '@initx-plugin/core'
+import { type InitxContext, type InitxMatcherRules, InitxPlugin } from '@initx-plugin/core'
 import { c, log } from '@initx-plugin/utils'
 
 export default class DevelopmentPlugin extends InitxPlugin {
-  rules = {
+  rules: InitxMatcherRules = {
     matching: 'dev',
-    description: 'Development assistance'
+    description: 'Development assistance',
+    optional: [
+      'sync'
+    ]
   }
 
   async handle(_ctx: InitxContext, type: string, ...others: string[]) {
