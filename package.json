@@ -2,7 +2,7 @@
   "name": "@initx-plugin/dev",
   "type": "module",
   "version": "0.0.4",
-  "packageManager": "pnpm@10.7.0",
+  "packageManager": "pnpm@11.5.2",
   "description": "development assistance plugin for initx",
   "author": "imba97",
   "license": "MIT",
@@ -39,13 +39,13 @@
     "@antfu/eslint-config": "^9.0.0",
     "@initx-plugin/core": "*",
     "@initx-plugin/utils": "*",
-    "@types/node": "^22.13.14",
-    "bumpp": "^10.1.0",
-    "eslint": "^9.23.0",
+    "@types/node": "^25.9.2",
+    "bumpp": "^11.1.0",
+    "eslint": "^10.4.1",
     "nano-staged": "^1.0.2",
-    "simple-git-hooks": "^2.12.1",
-    "typescript": "^5.8.2",
-    "unbuild": "^3.5.0"
+    "simple-git-hooks": "^2.13.1",
+    "typescript": "^6.0.3",
+    "unbuild": "^3.6.1"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm nano-staged"
