@@ -8,7 +8,6 @@ export default defineBuildConfig({
     esbuild: {
       minify: true
     },
-    inlineDependencies: true,
     json: {
       compact: true,
       namedExports: false,
