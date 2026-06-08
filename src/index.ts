@@ -1,6 +1,6 @@
 import type { InitxContext, InitxMatcherRules } from '@initx-plugin/core'
 import { InitxPlugin } from '@initx-plugin/core'
-import { c, log } from '@initx-plugin/utils'
+import { c, logger } from '@initx-plugin/utils'
 
 export default class DevelopmentPlugin extends InitxPlugin {
   rules: InitxMatcherRules = {
@@ -23,7 +23,7 @@ export default class DevelopmentPlugin extends InitxPlugin {
             ]
           : others
 
-        log.info(`Syncing cnpm packages: ${syncPackages.join(', ')}`)
+        logger.info(`Syncing cnpm packages: ${syncPackages.join(', ')}`)
 
         await c('npx', ['cnpm', 'sync', ...syncPackages], {
           nodeOptions: {
@@ -35,7 +35,7 @@ export default class DevelopmentPlugin extends InitxPlugin {
       }
 
       default: {
-        log.warn(`Unknown type: ${type}`)
+        logger.warn(`Unknown type: ${type}`)
       }
     }
   }
