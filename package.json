@@ -42,15 +42,15 @@
     "@types/node": "^22.13.14",
     "bumpp": "^10.1.0",
     "eslint": "^9.23.0",
-    "lint-staged": "^15.5.0",
+    "nano-staged": "^1.0.2",
     "simple-git-hooks": "^2.12.1",
     "typescript": "^5.8.2",
     "unbuild": "^3.5.0"
   },
   "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
+    "pre-commit": "pnpm nano-staged"
   },
-  "lint-staged": {
+  "nano-staged": {
     "*": "eslint --cache --fix"
   }
 }
